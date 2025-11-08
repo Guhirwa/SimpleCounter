@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React and TypeScript application demonstrating state management, component reusability, and Tailwind CSS styling. The app features a counter that increases when clicked and smoothly resets back to zero using an interval.
 
-Currently, two official plugins are available:
+The Counter App is a minimal project built to explore key React concepts such as functional components, state management with hooks, and prop-driven reusability.  
+It uses Tailwind CSS for styling and transitions, offering a modern and responsive interface.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app includes:
+- A **Counter component** that manages state and logic
+- A **Button component** that accepts props for customization
+- Smooth hover effects and responsive layout
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Increment counter on button click  
+- Gradual reset back to zero using a timed interval  
+- Reusable Button component with props  
+- Styled using Tailwind CSS with transitions and hover states
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React (Functional Components)
+- TypeScript
+- Tailwind CSS
+- Vite (Development Tool)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## How to Run the Project
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+  git clone https://github.com/Guhirwa/SimpleCounter.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install Dependencies:
+```bash
+  npm install
 ```
+
+3. Run the Development Server:
+```bash
+  npm run dev
+```
+
+4. Open you browser and Visit:
+```bash
+  http://localhost:5173
+```
+
+## Demo
+![App Demonstration](./src/assets/demo.png)
+
+### Author
+
+Christian GUHIRWA <br />
+Email: [guhirwachristian004@gmail.com](mailto:guhirwachristian004@gmail.com) <br />
+Github: [Guhirwa](https://github.com/Guhirwa)
